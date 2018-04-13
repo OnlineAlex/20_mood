@@ -1,7 +1,13 @@
-# Site for the Mood
+# Сайт анекдотов и афоризмов
 
-[TODO. There will be project description]
+Сайт поднимает насроение штуками. 
 
-# Project Goals
+Не понравилась шутка? - Перезагрузи страницу, будет другая. Понравилась? - Продолжай работу!
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+#### Ссылка на сайт
+
+`https://onlinealex.github.io/20_mood/index.html` [Перейти](https://onlinealex.github.io/20_mood/index.html)
+
+# Цели проекта
+
+Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
