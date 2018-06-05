@@ -4,7 +4,14 @@
 
   <meta charset="utf-8">
   <title>Настроение</title>
-
+  <style>
+    body{
+      background-color: #FBEC5D!important;
+    }
+    #aphorisms{
+      font-size: 24px;
+    }
+  </style>
   <script id="quotes_json" type="application/json">
     [
       {
@@ -71,27 +78,27 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
 </head>
-<body class="bg-warning">
+<body>
 
   <script type="text/javascript">
-    var quotes = JSON.parse(document.getElementById('quotes_json').innerHTML)
-    var quoteIndex = Math.floor(Math.random() * quotes.length)
-    var quote = quotes[quoteIndex]
+    var quotes = JSON.parse(document.getElementById('quotes_json').innerHTML);
+    var quoteIndex = Math.floor(Math.random() * quotes.length);
+    var quote = quotes[quoteIndex];
 
     window.onload = function() {
       document.getElementById('aphorisms').textContent = quote.phrase;
       if (quote.signature){
-        var signature = document.createElement('p')
-        document.getElementById('main').appendChild(signature)
-        signature.className = 'text-light bg-dark col-md-3 offset-md-8 col-6 font-italic offset-6'
-        signature.textContent = quote.signature
+        document.getElementById('signature').textContent = quote.signature
+      } else {
+        document.getElementById('signature').hidden = true
       }
     }
   </script>
 
   <div class="container" id="main">
-    <h2 class="text-center p-5">Лучшая шутка этой секунды</h2>
-    <p class="bg-white mb-0 col-md-6 offset-md-3 col-sm-8 offset-sm-2 lead" id="aphorisms"></p>
+    <h1 class="text-center p-5 display-4 font-weight-bold">Лучшая шутка этой секунды</h1>
+    <p class="bg-white col-md-6 offset-md-3 col-sm-8 offset-sm-2 lead p-3 mb-0" id="aphorisms"></p>
+    <p class="text-light bg-dark col-md-3 offset-md-8 col-6 font-italic offset-6 p-3" id="signature"></p>
   </div>
   <h6 class="text-center p-5">*В следующий раз будет действительно смешная шутка</h6>
 </body>
